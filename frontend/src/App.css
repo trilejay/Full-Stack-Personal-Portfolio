@@ -1,0 +1,447 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+  /*   ----- Variables  -----  */
+  :root {
+      --plant-green:#8b987d;
+      --sky-grey: rgba(155, 159, 165, 0.429);
+      --light-sky-grey: rgb(191, 204, 208, 0.8);
+      --sunset-grey:#FBEEC8;
+      --daisy-yellow:#eecb59;
+      --daisy-brown:#260A06;
+    }
+    
+    /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+    body {       /* Can alternatively define in html {}. */
+      background-color:var(--light-sky-grey);
+      background-image:url(/src/assets/daisies-compressed.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: var(--daisy-brown);
+      font-family:'Lato', sans-serif; /* Define with at least one font name and its related generic family name.*/
+      margin:50px auto;
+      padding:10px;
+      max-width:1200px;
+    }
+    
+    /*  ----- Page layout blocks -----  */
+    header {
+      background-color:var(--daisy-yellow);
+      color: var(--daisy-brown);
+      font-family:'Albert Sans', sans-serif; /* Define with at least one font name and its related generic family name.*/
+      padding: 1%;
+      text-align: center;
+      font-size:x-large;
+      border:1px #260A06;
+      border-radius: 30px;
+      margin-bottom: 40px
+  }
+    main {
+      background-color: var(--light-sky-grey);
+      border-radius: 30px;
+    }
+    section {
+      padding: 2%
+    }
+    article {}
+      #topic1 {}
+      #topic2 {}
+    div {}
+    aside {}
+    footer {
+      background-color: var(--daisy-yellow);
+      padding: 15px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      color: var(--daisy-brown);
+      border-radius: 30px;
+    }
+    
+    /* ----- Anchors ----- Text links */
+    a {}
+    a:link {}
+    a:hover {}
+    a:active {}
+    a:visited {}
+    
+    /*  ----- Navigation ----- Override text links for navigation only.  */
+    nav {
+      text-align:center;
+      flex-flow:row wrap;
+      margin-bottom: 30px;
+      color:aliceblue;
+      
+    }
+    nav a {
+      background-color:var(--sunset-grey);
+      padding:15px;
+      border:1px solid var(--daisy-brown);
+      border-radius:10px 10px 10px 10px;
+      margin-right:30px;
+      color:var(--daisy-brown);
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: var(--daisy-yellow);
+      color:var(--daisy-brown)
+    }
+  
+    .local {
+      text-align: left; 
+      margin: 0; 
+      padding: 0;
+      flex-flow: row;
+      display:flex;
+  }
+  
+    .local a {
+      margin: 5px 0; 
+      padding: 8px; 
+      border: .5px solid black;
+      margin-right: 10px;
+      background-color: rgb(161, 195, 149);
+      border-radius: 5px;
+      color: var(--daisy-brown)
+  }
+  .local a:hover {
+      background-color: var(--light-sky-grey);
+  }
+    
+    /*  -----  Typography  ----- */
+    p {
+      color:#260A06
+    }
+    br {}
+    ol, ul, dl {}
+    li {}
+    dt {}
+    dd {}
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family:'Albert Sans', sans-serif;
+      color:#260A06;
+    } 
+    h1 {}
+    h2 {
+      background: var(--daisy-yellow);
+      padding:10px;
+      border-radius: 10px;
+    }
+    h3 {}
+    h4 {}
+    h5 {}
+    h6 {}
+    
+    abbr {}
+    acronym {}
+    address {}
+    blockquote {}
+      q {}
+      cite {}
+    em {}
+    hr {}
+    mark {}
+    s {}
+    span {}
+    strong {}
+    sub {}
+    sup {}
+    time {}
+    
+    /*  ----- Coding or instructional typography ----- */
+    pre {}
+    code {}
+    kbd {}
+    samp {}
+    var {}
+    del {} 
+    ins {}
+    
+    /*  ----- Table ----- */
+    /* Add these styles to your CSS file or a <style> block */
+#jobs {
+  width: 100%; /* Make sure the table takes the full width of its container */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  table-layout: fixed; /* Fix column widths */
+}
+
+#jobs th, #jobs td {
+  padding: 8px; /* Add some padding for readability */
+  text-align: left; /* Align text to the left */
+  overflow: hidden; /* Hide any overflow content */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+#jobs th {
+  background-color: #f4f4f4; /* Light background for header */
+  border-bottom: 1px solid #ddd; /* Light border for header */
+}
+
+#jobs td {
+  border-bottom: 1px solid #ddd; /* Light border for table rows */
+}
+
+    table {
+      border:1px solid #260A06;
+      background: #FBEEC8;
+      border-collapse: collapse;
+      width:100%;
+    }
+    caption {
+      margin-bottom: 5%;
+    }
+    thead {
+      text-align: left;
+    }
+    tbody {}
+    tfoot {}
+    tr {
+       background-color:#f1e9ce
+    }
+      tr:nth-child(even) {
+        background-color:#e9d496
+      }
+    th {
+      background-color: #eecb59;
+      padding: 3%;
+      border-bottom: 2px solid var(--daisy-brown);
+      text-align: left;
+    }
+    td {
+      padding: 3%;
+      padding-bottom: 15px;
+      border-bottom:0.5px solid #260A06
+    }
+    td:nth-child(1) {}
+    .clicker{
+      display:flex;
+    }
+    .price-column{
+      text-align:right;
+    }
+    .price-header{
+      text-align:right;
+    }
+    .icon {
+      cursor: pointer;
+      margin: 0 10px; 
+    }
+    colgroup {}
+    data {}
+    datalist {}
+    
+    
+    /*  ----- Form ----- */
+    fieldset {
+      border:3px solid var(--plant-green);
+      margin-top: 3%;
+      padding: 1.5%;
+      flex: 1;
+    }
+      legend {
+        background-color:#d4e3c4;
+        border:3px solid var(--plant-green);
+        border-bottom: 0;
+        color:#1e2b11;
+        font-size:105%;
+        font-weight:bold;
+        
+      }
+    label {
+      display:block;
+      margin-top:2%;
+      color:#260A06
+     
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 1.5%; 
+      margin: 0 auto; 
+    }
+    button{
+      color:#f8f4e6;
+      background-color: #8b987d;
+      padding:3%;
+      font-size:large;
+      border-color: #8b987d;
+      
+    }
+    button:hover{
+      background-color: #bcc9ae;
+      cursor: pointer;
+    }
+  
+  
+    form, button, input, select, textarea {
+      font-family:inherit;
+    }
+    input{
+      padding: 1%;
+      font-size:102%;
+      color:#260A06
+    }
+   
+  :focus{
+    background-color: var(--light-sky-grey);
+  }
+  
+  ::placeholder{
+    color:var()
+  }
+    select {
+      padding: 1%;
+      font-size:102%;
+    }
+      optgroup {}
+      option {}
+  
+    textarea {
+      width: 95%;
+      height: 200px;
+      padding: 1.5%;
+    }
+    output {}
+    meter {}
+    progress {}
+    
+    
+    /* ----- Media ----- */
+    figure {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      margin: 10px; 
+      padding: 10px; 
+      border: 1px solid var(--daisy-brown); 
+      border-radius: 10px; 
+      background-color: var(--sunset-grey); 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: calc(100% - 40px); 
+  }
+  figcaption {
+    margin-top: 10px;
+    font-family: 'Public Sans', sans-serif; 
+    color: var(--daisy-brown); 
+    text-align: center; 
+  }
+  figure img {
+    max-width: 100%; 
+    border-radius: 5px; 
+    border-radius: 5px; 
+  } 
+  
+  @media (min-width: 600px) {
+    figure {
+        width: calc(50% - 40px); 
+    }
+  }
+  
+  @media (min-width: 900px) {
+    figure {
+        width: calc(33.33% - 40px); 
+    }
+  }
+    svg {}
+    picture {}
+      source {}
+    iframe {}
+    video {}
+    audio {}
+    embed {}
+    object {}
+    
+    /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  
+    .gallery {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center; 
+  }
+  
+    .floatright {}
+    .floatleft {}
+    .center-middle {}
+    
+    .ten {}
+    .twenty {}
+    .thirty {}
+    .forty {}
+    .fifty {}
+    .sixty {}
+    .seventy {}
+    .eighty {}
+    
+    .radius {}
+    .circle {}
+    .boxshadow {}
+    .tshadow {} 
+    .gradient {}
+    .shape {}
+    
+    @keyframes App-logo {}
+    
+    /*   ===== TABLET  media query overrides mobile styles ===== */
+    @media all and (min-width: 600px) {}
+    
+    /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+    @media all and (min-width: 1080px) {}
+    
+    /*   ===== PRINT  media query overrides previous styles =====  */
+    @media print {}
+    
+
+
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */

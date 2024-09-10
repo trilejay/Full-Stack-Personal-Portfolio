@@ -1,0 +1,107 @@
+### CREATE five documents.
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "jobtitle": "Chemist",
+    "company": "SCV Water",
+    "fromdate": "2023-10-03",
+    "enddate": "2024-11-01",
+    "teamsize": 6
+}
+
+
+### CREATE 2
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "jobtitle": "SWE Intern",
+    "company": "Pinear",
+    "fromdate": "2024-03-10",
+    "enddate": "2024-06-07",
+    "teamsize": 5
+}
+
+### CREATE 3
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "jobtitle": "Specimen Processor",
+    "company": "Q2 Solutions",
+    "fromdate": "2022-04-09",
+    "enddate": "2023-07-12",
+    "teamsize": 50
+}
+
+
+### CREATE 4
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "jobtitle": "Delivery Associate",
+    "company": "Amazon",
+    "fromdate": "2021-09-19",
+    "enddate": "2021-12-29",
+    "teamsize": 35
+}
+
+### CREATE 5
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "jobtitle": "Associate",
+    "company": "Nike",
+    "fromdate": "2024-03-10",
+    "enddate": "2024-06-07",
+    "teamsize": 30
+}
+
+### CREATE 6
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "jobtitle": "Team Member",
+    "company": "Domino's",
+    "fromdate": "2018-07-24",
+    "enddate": "2019-03-06",
+    "teamsize": 8
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/jobs HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/jobs/66add97353a84ae79430de80 HTTP/1.1
+
+
+### UPDATE one document's job title, by ID.
+### Replace the ID in the following request with one that exists
+### and update the job title:
+PUT http://localhost:3000/jobs/66add565ce473b0e82497b86 HTTP/1.1
+content-type: application/json
+
+{
+    "jobtitle": "Scientist",
+    "company": "SCV Water",
+    "fromdate": "2023-03-10",
+    "enddate": "2024-01-11",
+    "teamsize": 6
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/jobs/66adda4c51485be3685f5987 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/jobs HTTP/1.1
+
